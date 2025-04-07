@@ -391,7 +391,7 @@ const packages: TourPackage[] = [
 // Function to generate dynamic metadata
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
 
-  const {slug} = await params
+  const { slug } = await params
   const packageData = packages.find(pkg => pkg.slug === slug);
 
   if (!packageData) {
@@ -419,7 +419,7 @@ export default async function PackageDetailsPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const slug  = (await params).slug;
+  const slug = (await params).slug;
   const selectedPackage = packages.find(pkg => pkg.slug === slug);
 
   // If no matching package is found, show an error message
@@ -430,7 +430,7 @@ export default async function PackageDetailsPage({
           <div className="container-custom text-center">
             <h1 className="text-3xl font-bold mb-4">Package Not Found</h1>
             <p className="mb-6">Sorry, the package you&apos;re looking for doesn&apos;t exist.</p>
-            <Button className="bg-forest-DEFAULT hover:bg-forest-light">
+            <Button className="bg-forest hover:bg-forest-light">
               Go Back
             </Button>
           </div>
@@ -454,7 +454,7 @@ export default async function PackageDetailsPage({
         </div>
         <div className="container-custom relative z-10">
           <div className="flex flex-col max-w-3xl">
-            <Badge className="self-start mb-4 bg-forest-DEFAULT text-white">{selectedPackage.category}</Badge>
+            <Badge className="self-start mb-4 bg-forest text-white">{selectedPackage.category}</Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{selectedPackage.title}</h1>
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <div className="flex items-center text-amber-400">
@@ -515,8 +515,8 @@ export default async function PackageDetailsPage({
                 <SectionTitle title="Tour Itinerary" />
                 <div className="space-y-6">
                   {selectedPackage.itinerary.map((day) => (
-                    <div key={day.day} className="border-l-2 border-forest-DEFAULT pl-5 relative">
-                      <div className="absolute -left-2.5 top-0 h-5 w-5 rounded-full bg-forest-DEFAULT"></div>
+                    <div key={day.day} className="border-l-2 border-forest pl-5 relative">
+                      <div className="absolute -left-2.5 top-0 h-5 w-5 rounded-full bg-forest"></div>
                       <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
                         <h3 className="text-xl font-bold mb-2">Day {day.day}: {day.title}</h3>
                         <p className="text-gray-700 mb-4">{day.description}</p>
@@ -547,7 +547,7 @@ export default async function PackageDetailsPage({
                     <label className="block text-gray-700 mb-1 text-sm">Full Name</label>
                     <input
                       type="text"
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest-DEFAULT focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest focus:border-transparent"
                       placeholder="Your full name"
                       required
                     />
@@ -556,7 +556,7 @@ export default async function PackageDetailsPage({
                     <label className="block text-gray-700 mb-1 text-sm">Email Address</label>
                     <input
                       type="email"
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest-DEFAULT focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest focus:border-transparent"
                       placeholder="Your email address"
                       required
                     />
@@ -565,7 +565,7 @@ export default async function PackageDetailsPage({
                     <label className="block text-gray-700 mb-1 text-sm">Phone Number</label>
                     <input
                       type="tel"
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest-DEFAULT focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest focus:border-transparent"
                       placeholder="Your phone number"
                       required
                     />
@@ -574,7 +574,7 @@ export default async function PackageDetailsPage({
                     <label className="block text-gray-700 mb-1 text-sm">Travel Date</label>
                     <input
                       type="date"
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest-DEFAULT focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest focus:border-transparent"
                       required
                     />
                   </div>
@@ -583,7 +583,7 @@ export default async function PackageDetailsPage({
                     <input
                       type="number"
                       min="1"
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest-DEFAULT focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest focus:border-transparent"
                       placeholder="Number of travelers"
                       required
                     />
@@ -591,7 +591,7 @@ export default async function PackageDetailsPage({
                   <div>
                     <label className="block text-gray-700 mb-1 text-sm">Special Requests (Optional)</label>
                     <textarea
-                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest-DEFAULT focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-forest focus:border-transparent"
                       rows={3}
                       placeholder="Any special requests or questions?"
                     ></textarea>
@@ -608,7 +608,7 @@ export default async function PackageDetailsPage({
                 <ul className="space-y-2 mb-6">
                   {selectedPackage.inclusions.map((inclusion, index) => (
                     <li key={index} className="flex items-start">
-                      <ChevronRight className="h-4 w-4 mr-2 text-forest-DEFAULT mt-1 flex-shrink-0" />
+                      <ChevronRight className="h-4 w-4 mr-2 text-forest mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{inclusion}</span>
                     </li>
                   ))}
@@ -656,7 +656,7 @@ export default async function PackageDetailsPage({
               <Users className="mr-2" />
               Talk to an Expert
             </Button>
-            <Button variant="outline" className="border-forest text-forest hover:bg-forest-DEFAULT/10">
+            <Button variant="outline" className="border-forest text-forest hover:bg-forest/10">
               <MapPin className="mr-2" />
               View on Map
             </Button>

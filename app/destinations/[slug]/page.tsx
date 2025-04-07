@@ -254,7 +254,7 @@ export default async function DestinationDetailsPage({
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {destination.thingsToDo.map((activity, index) => (
                     <li key={index} className="flex items-start">
-                      <div className="mr-3 mt-1 text-forest-DEFAULT">
+                      <div className="mr-3 mt-1 text-forest">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
@@ -274,23 +274,23 @@ export default async function DestinationDetailsPage({
                   <h3 className="text-xl font-semibold mb-4">Destination Quick Facts</h3>
                   <ul className="space-y-4">
                     <li className="flex items-center text-gray-700">
-                      <MapPin className="h-5 w-5 mr-3 text-forest-DEFAULT" />
+                      <MapPin className="h-5 w-5 mr-3 text-forest" />
                       <span><strong>Location:</strong> {destination.location}</span>
                     </li>
                     <li className="flex items-center text-gray-700">
-                      <Star className="h-5 w-5 mr-3 text-forest-DEFAULT" />
+                      <Star className="h-5 w-5 mr-3 text-forest" />
                       <span><strong>Rating:</strong> {destination.rating} ({destination.reviews} reviews)</span>
                     </li>
                     <li className="flex items-center text-gray-700">
-                      <Clock className="h-5 w-5 mr-3 text-forest-DEFAULT" />
+                      <Clock className="h-5 w-5 mr-3 text-forest" />
                       <span><strong>Best Time to Visit:</strong> {destination.bestTimeToVisit}</span>
                     </li>
                     <li className="flex items-start text-gray-700">
-                      <Users className="h-5 w-5 mr-3 text-forest-DEFAULT shrink-0 mt-1" />
+                      <Users className="h-5 w-5 mr-3 text-forest shrink-0 mt-1" />
                       <span><strong>Attractions:</strong> {destination.attractions} major attractions</span>
                     </li>
                     <li className="flex items-center text-gray-700">
-                      <div className="h-5 w-5 mr-3 text-forest-DEFAULT flex items-center justify-center">
+                      <div className="h-5 w-5 mr-3 text-forest flex items-center justify-center">
                         <span className="text-sm font-bold">C</span>
                       </div>
                       <span><strong>Category:</strong> {destination.category}</span>
@@ -300,11 +300,11 @@ export default async function DestinationDetailsPage({
               </Card>
 
               {/* Call to Action */}
-              <Card className="mb-6 bg-forest-DEFAULT text-white">
+              <Card className="mb-6 bg-forest text-white">
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-4">Explore {destination.name}</h3>
                   <p className="mb-4">Ready to experience the beauty of {destination.name}? Check out our curated tour packages!</p>
-                  <Button className="w-full bg-white text-forest-DEFAULT hover:bg-gray-100">
+                  <Button className="w-full bg-white text-forest hover:bg-gray-100">
                     View Tour Packages
                   </Button>
                 </CardContent>
@@ -319,9 +319,9 @@ export default async function DestinationDetailsPage({
                       <li key={index}>
                         <a
                           href={`/destinations/${nearby.slug}`}
-                          className="flex items-center text-gray-700 hover:text-forest-DEFAULT transition-colors"
+                          className="flex items-center text-gray-700 hover:text-forest transition-colors"
                         >
-                          <div className="mr-3 text-forest-DEFAULT">
+                          <div className="mr-3 text-forest">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                               <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                             </svg>
@@ -359,8 +359,8 @@ export default async function DestinationDetailsPage({
                 <h3 className="text-xl font-semibold mb-2">{destination.name} Explorer</h3>
                 <p className="text-gray-700 mb-4">Experience the best of {destination.name} with our most popular package.</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-forest-DEFAULT font-bold">From $199</span>
-                  <Button variant="outline" className="border-forest-DEFAULT text-forest-DEFAULT hover:bg-forest-DEFAULT hover:text-white">
+                  <span className="text-forest font-bold">From $199</span>
+                  <Button variant="outline" className="border-forest text-forest hover:bg-forest hover:text-white">
                     View Details
                   </Button>
                 </div>
@@ -378,8 +378,8 @@ export default async function DestinationDetailsPage({
                 <h3 className="text-xl font-semibold mb-2">{destination.name} Adventure</h3>
                 <p className="text-gray-700 mb-4">For thrill-seekers looking to experience the adventurous side of {destination.name}.</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-forest-DEFAULT font-bold">From $249</span>
-                  <Button variant="outline" className="border-forest-DEFAULT text-forest-DEFAULT hover:bg-forest-DEFAULT hover:text-white">
+                  <span className="text-forest font-bold">From $249</span>
+                  <Button variant="outline" className="border-forest text-forest hover:bg-forest hover:text-white">
                     View Details
                   </Button>
                 </div>
@@ -397,8 +397,8 @@ export default async function DestinationDetailsPage({
                 <h3 className="text-xl font-semibold mb-2">Luxury {destination.name} Retreat</h3>
                 <p className="text-gray-700 mb-4">Indulge in our premium package with luxury accommodations and exclusive experiences.</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-forest-DEFAULT font-bold">From $349</span>
-                  <Button variant="outline" className="border-forest-DEFAULT text-forest-DEFAULT hover:bg-forest-DEFAULT hover:text-white">
+                  <span className="text-forest font-bold">From $349</span>
+                  <Button variant="outline" className="border-forest text-forest hover:bg-forest hover:text-white">
                     View Details
                   </Button>
                 </div>
@@ -428,7 +428,7 @@ export default async function DestinationDetailsPage({
             <Button className="bg-forest hover:bg-forest-light">
               Contact Our Travel Experts
             </Button>
-            <Button variant="outline" className="border-forest text-forest hover:bg-forest-DEFAULT/10">
+            <Button variant="outline" className="border-forest text-forest hover:bg-forest/10">
               View All {destination.name} Packages
             </Button>
           </div>
