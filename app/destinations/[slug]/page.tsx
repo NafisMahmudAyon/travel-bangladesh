@@ -155,11 +155,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export async function generateStaticParams() {
-  return destinations.map(dst => ({
-    slug: dst.slug
-  }));
-}
+// export async function generateStaticParams() {
+//   return destinations.map(dst => ({
+//     slug: dst.slug
+//   }));
+// }
 
 export default async function DestinationDetailsPage({
   params,
